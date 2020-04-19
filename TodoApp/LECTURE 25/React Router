@@ -1,0 +1,8 @@
+#theory:
+
+act as a interlink between the app.js and the server
+
+it stops the request from the app.js to go to the server as we only need the index.html file most of the time so there is no need
+to contact the server again and again
+
+  
