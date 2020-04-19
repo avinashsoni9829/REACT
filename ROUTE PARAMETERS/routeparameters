@@ -1,0 +1,21 @@
+#theory:
+
+part of the url that can change 
+
+we usually see them on the urls for individual records
+
+
+for ex:
+
+**User Profile Route:
+
+mysite.com/users/avi9314
+
+mysite.com/users/naldf
+
+**cooking recipie page
+
+
+mycookingsite.com/recipes/12345
+mycookingsite.com/recipes/98765
+
