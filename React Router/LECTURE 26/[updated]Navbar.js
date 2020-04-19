@@ -1,5 +1,5 @@
 import React from 'react'
-import { link , Navlink } from 'react-router-dom'
+import { Link , NavLink } from 'react-router-dom'
 //use ALT+SHIFT+DOWN to make a copy
 
 // we have changed the anchor tag to link tag so the react router can act as  middle-man between the app.js and the server  and doesnt allow
@@ -15,9 +15,9 @@ const Navbar =() =>
        <a  className="brand-logo">Poke'Times</a>
       <ul className="right">
       
-      <li> <link to="/">Home</link></li>
-      <li> <link to="/About">About</link></li>
-      <li> <link to="/Contact">Contact</link></li>
+      <li> <Link to="/">Home</Link></li>
+      <li> <Link to="/About">About</Link></li>
+      <li> <Link to="/Contact">Contact</Link></li>
       
       </ul>
        </div>
