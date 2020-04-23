@@ -12,7 +12,9 @@ class QuizBee extends Component
     // this lets us ti centrally store and use state data and make it easy for  debugging
 
     state = {
-        questionBank: []                         //to store the questions from the API
+        questionBank: [], //to store the questions from the API
+        score: 0,
+        responses:0
     };
     
     // function to extract question
@@ -25,6 +27,27 @@ class QuizBee extends Component
                 });
             });
     };
+
+
+    computeAnswer =(answer,correctAnswer) =>
+    {
+         if(answer === correctAnswer)
+         {
+             this.setState(
+                 {
+                     score: this.state.score + 1   //increment by 1
+
+                 }
+             );
+             this.setState(
+                 {
+                     responses: this.state.responses < 5 ? this.state.responses + 1 : 5  //increment in all cases
+
+                 }
+             )
+
+         }
+    }
 
      //now we will use the componentDidMount feature to make the function getQuestions work for the project 
 
@@ -41,17 +64,23 @@ class QuizBee extends Component
         return(
             <div className="container">
            <div className="title">QuizBee</div> 
-            {this.state.questionBank.length > 0 && 
+
+            {this.state.questionBank.length > 0 &&   this.state.responses < 5 &&
+               
                 this.state.questionBank.map(
                 ({ question,answers,correct,questionId }) => (
 
                     <QuestionBox 
                     question={question}
                      options={answers}
-                     key={questionId} />
+                     key= {questionId}
+                     selected={ answer => this.computeAnswer(answer,correct)}
+                     />
 
                 )
-                )}        
+                )}  
+
+          
             </div>
 
         );
