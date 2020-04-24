@@ -4,6 +4,7 @@ import "./assets/style.css";
 
 import quizService from "./quizService";
 import QuestionBox from "./components/QuestionBox";
+import Result from "./components/Result";
 //root component
 
 class QuizBee extends Component
@@ -30,7 +31,7 @@ class QuizBee extends Component
 
 
     computeAnswer =(answer,correctAnswer) =>
-    {
+            {
          if(answer === correctAnswer)
          {
              this.setState(
@@ -50,7 +51,17 @@ class QuizBee extends Component
     }
 
      //now we will use the componentDidMount feature to make the function getQuestions work for the project 
+      
 
+     playAgain =() =>
+     {
+         this.getQuestions();
+         this.setState({
+             score:0,
+             responses:0
+         });
+     };
+    
      componentDidMount()
      {
          this.getQuestions();   //function is invoked
@@ -65,7 +76,8 @@ class QuizBee extends Component
             <div className="container">
            <div className="title">QuizBee</div> 
 
-            {this.state.questionBank.length > 0 &&   this.state.responses < 5 &&
+              { (this.state.questionBank.length > 0) &&  
+                 (this.state.responses < 5 ) &&
                
                 this.state.questionBank.map(
                 ({ question,answers,correct,questionId }) => (
@@ -74,13 +86,13 @@ class QuizBee extends Component
                     question={question}
                      options={answers}
                      key= {questionId}
-                     selected={ answer => this.computeAnswer(answer,correct)}
+                     selected={answer => this.computeAnswer(answer,correct)}
                      />
 
                 )
                 )}  
 
-          
+                {this.state.responses===5 ? (<Result score={this.state.score} playAgain={this.playAgain} />) : null}
             </div>
 
         );
