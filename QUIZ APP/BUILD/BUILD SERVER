@@ -1,0 +1,6 @@
+this is used to deploy the app on our server
+
+press ctrl+c to terminate the production build
+
+then on terminal write the command:
+npm run build 
