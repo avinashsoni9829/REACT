@@ -9,7 +9,7 @@ const QuestionBox= ({question,options,selected }) =>   //props: question,options
     return (
         <div className="questionBox">
         <div className="question">{question}</div>
-        {answer.map((text,index)=> (
+        {answer.map((text, index) => (
             <button
              key={index} 
              className="answerBtn"
