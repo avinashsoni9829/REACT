@@ -1,13 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const Notifications = () => {
-    return (
-        <div>
-            <p className="white-text">
-                Notifications
-            </p>
-        </div>
-    )
-}
+  return (
+    <div>
+      <p>Notifications</p>
+    </div>
+  );
+};
 
 export default Notifications;
