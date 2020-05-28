@@ -1,12 +1,13 @@
-//functional component
-import React from "react";
+import React from 'react';
 
 const Notifications = () => {
-    return(
+    return (
         <div>
-        <p> Notifications</p>
+            <p className="white-text">
+                Notifications
+            </p>
         </div>
     )
-} 
+}
 
-export default Notifications
+export default Notifications;
