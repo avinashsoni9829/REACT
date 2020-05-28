@@ -1,40 +1,20 @@
-//functional component
-//data gonna flow in from dashboard component as a prop in this 
+import React from "react";
+import { Link } from 'react-router-dom'
 
-import React from 'react'
+import ProjectSummary from "./ProjectSummary";
 
-const ProjectList = () =>
-{
-    return(
-        <div className="project-list section">
-        
-        <div className="card z-depth-0 project-summary">
-        <div className="card-content grey-text text-darken-3">
-        <span className="card-title">Project Title</span>
-        <p>posted by the net ninja</p>
-        <p className="grey-text">3rd September ,2AM</p>
-        </div>
-        </div>
+const ProjectList = ({ projects }) => {
+  return (
+    <div className="project list section">
+      {projects && projects.map((project) => {
+        return (
+          <Link to={'/project/' + project.id} key={project.id} >
+            <ProjectSummary project={project} />
+          </Link>
+        )
+      })}
+    </div>
+  );
+};
 
-        <div className="card z-depth-0 project-summary">
-        <div className="card-content grey-text text-darken-3">
-        <span className="card-title">Project Title</span>
-        <p>posted by the net ninja</p>
-        <p className="grey-text">3rd September ,2AM</p>
-        </div>
-        </div>
-        <div className="card z-depth-0 project-summary">
-        <div className="card-content grey-text text-darken-3">
-        <span className="card-title">Project Title</span>
-        <p>posted by the net ninja</p>
-        <p className="grey-text">3rd September ,2AM</p>
-        </div>
-        </div>
-        
-        
-        </div>
-    )
-}
-
-
-export default ProjectList
+export default ProjectList;
