@@ -1,0 +1,15 @@
+  #COMPONENTS
+  
+  * they are the core building blocks for creating resuable html prompts 
+  
+  
+  #JSX
+  
+  * it is the react propriteory wrapper of react around javascript
+  * helps in building COMPONENTS using the html syntax
+
+  #WHY REACT?
+
+  * react is more speedy than the vanila js because of its virtual DOM feature
+  * resuable web COMPONENTS
+  
