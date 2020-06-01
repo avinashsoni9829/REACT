@@ -13,3 +13,8 @@
   * react is more speedy than the vanila js because of its virtual DOM feature
   * resuable web COMPONENTS
   
+  NOTE: 
+  
+  it is a good convention to keep every functional/class component  in the different files
+  
+  
