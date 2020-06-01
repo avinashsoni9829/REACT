@@ -13,10 +13,24 @@
   * react is more speedy than the vanila js because of its virtual DOM feature
   * resuable web COMPONENTS
   
-  NOTE: 
+  #functional components:
   
   it is a good convention to keep every functional/class component  in the different files 
   also we will need to import react in that case to make sure that the jsx is working properly
+  
+  so basically to make a "good" functional component
+  
+  1. create a separate file with name same as the component name
+  
+  2. import react 
+  
+  3. write the function component
+  
+  4. export it using -> export default {componentName};
+  
+  5. import the file in the main index.js file 
+  
+  
   
   
   
