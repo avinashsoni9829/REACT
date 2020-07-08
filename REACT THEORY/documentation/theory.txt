@@ -34,3 +34,6 @@ Create React App is a comfortable environment for learning React, and is the bes
 step 1: run this : npx create-react-app my-app
 step 2: run this : cd my-app
 step 3: run this : npm start
+
+Create React App doesn’t handle backend logic or databases; it just creates a frontend build pipeline, so you can use it with any backend you want. Under the hood, it uses Babel and webpack, but you don’t need to know anything about them
+
