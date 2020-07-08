@@ -9,4 +9,28 @@ Step 2: Run npm install babel-cli@6 babel-preset-react-app@3
 # Run JSX Preprocessor
 Create a folder called src and run this terminal command:
 
-npx babel --watch src --out-dir . --presets react-app/prod 
+npx babel --watch src --out-dir . --presets react-app/prod
+
+
+# BABEL
+  
+  Babel comes with a built-in CLI which can be used to compile files from the command line.
+
+#note
+
+If you’re learning React or creating a new single-page app, use Create React App.
+
+If you’re building a server-rendered website with Node.js, try Next.js.
+
+If you’re building a static content-oriented website, try Gatsby.
+
+If you’re building a component library or integrating with an existing codebase, try More Flexible Toolchains.
+  
+
+
+# CREATE REACT APP
+Create React App is a comfortable environment for learning React, and is the best way to start building a new single-page application in React.
+
+step 1: run this : npx create-react-app my-app
+step 2: run this : cd my-app
+step 3: run this : npm start
