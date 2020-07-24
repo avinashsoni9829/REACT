@@ -27,8 +27,44 @@ class App extends Component{
              // do something here !
          }
      }
-    */  
+    */ 
     
+    // lifecycle method(3)
+    
+    shouldComponentUpdate(nextprops,nextstate)
+    {
+        //return true if we want to update
+        //else false
+    }
+     
+    // lifeCycle method (4) //removed from react now
+    /*componentWillUnmount()
+    {
+        //clean up of code before component disappears
+        // ex: removing event listners
+        
+    }
+    */
+    
+    
+    //life cycle method (5) (newly added )
+    
+    static getDerivedStateFromProps(props,state)
+    {
+        //  it return the new,updated state based upon the props
+         
+    }
+    
+    
+    //life cycle method (5) (newly added)
+    
+    getSnapshotBeforeUpdate()
+    {
+        //creates backup
+    }
+    
+    
+    // life cycle method(6)
     render()
     {
         return(
