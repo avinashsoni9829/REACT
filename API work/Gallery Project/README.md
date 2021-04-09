@@ -1,2 +1,5 @@
+
 #Creating our app
-  npx create-react-app gallery
+
+
+npx create-react-app gallery
