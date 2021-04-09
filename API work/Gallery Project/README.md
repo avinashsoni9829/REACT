@@ -23,3 +23,19 @@ npx tailwind init tailwind.js --full
 
 
 
+step :   now create post css config file with following code configuration:
+
+   
+   
+         const tailwindcss = require('tailwindcss');
+
+         module.exports = {
+         plugins: [
+         tailwindcss('./tailwind.js'),
+         require('autoprefixer')
+         ]
+          }
+
+
+
+
