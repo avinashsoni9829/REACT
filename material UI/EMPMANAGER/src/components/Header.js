@@ -8,7 +8,6 @@ import SearchIcon from '@material-ui/icons/Search';
 const useStyles= makeStyles(theme =>({
     root:{
         backgroundColor: '#fff',
-        // gives the shadow effect !
         transform: 'translateZ(0)'
     },
     searchInput:{
